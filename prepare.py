@@ -1,4 +1,17 @@
- def basic_clean(string):
+
+import re
+import unicodedata
+import pandas as pd
+import nltk
+import prepare
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+ 
+ 
+ 
+ 
+def basic_clean(string):
     string = string.lower()
     string = unicodedata.normalize('NFKD', 
                           string).encode('ascii', 'ignore').decode('utf-8')
